@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Git - prosta strona</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <span class="logo">Demo Git</span>
+      <nav class="nav">
+        <a href="#o-projekcie">O projekcie</a>
+        <a href="#komendy">Komendy</a>
+        <a href="#demo">Demo</a>
+      </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Przelacz motyw">
+        Motyw
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Uczymy sie Gita na zywym przykladzie</h1>
+        <p class="lead">
+          Ta prosta strona sluzy jako poligon do cwiczenia podstawowych operacji
+          w systemie kontroli wersji Git - commitow, galezi i historii zmian.
+        </p>
+        <a class="btn" href="#demo">Zobacz demo</a>
+      </div>
+    </section>
+
+    <section id="o-projekcie" class="section">
+      <div class="container">
+        <h2>O projekcie</h2>
+        <p>
+          Strona zostala zbudowana z trzech plikow: <code>index.html</code>,
+          <code>style.css</code> oraz <code>script.js</code>. Dzieki rozdzieleniu
+          struktury, stylow i logiki latwiej pokazac, jak Git sledzi zmiany w
+          poszczegolnych plikach i jak wygladaja diffy.
+        </p>
+      </div>
+    </section>
+
+    <section id="komendy" class="section">
+      <div class="container">
+        <h2>Podstawowe komendy Gita</h2>
+        <ol class="command-list">
+          <li><code>git init</code> - utworzenie nowego repozytorium</li>
+          <li><code>git status</code> - sprawdzenie stanu plikow</li>
+          <li><code>git add .</code> - dodanie zmian do poczekalni</li>
+          <li><code>git commit -m "opis"</code> - zapisanie commita</li>
+          <li><code>git log</code> - przegladanie historii</li>
+          <li><code>git push</code> - wyslanie zmian na zdalne repozytorium</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="demo" class="section">
+      <div class="container">
+        <h2>Drobne demo interaktywne</h2>
+        <p>Kliknij przycisk, aby policzyc swoje cwiczebne commity:</p>
+        <div class="counter-card">
+          <button id="commit-btn" class="btn" type="button">Policz commit</button>
+          <p class="counter-text">Liczba commitow: <span id="commit-count">0</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Demo Git - strona cwiczebna.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
